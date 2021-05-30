@@ -44,6 +44,11 @@
   .logo {
     cursor: pointer;
   }
+
+  .logoSize {
+    height: 10vh;
+    width: auto;
+  }
   
   .nav__links a,
   .cta,
