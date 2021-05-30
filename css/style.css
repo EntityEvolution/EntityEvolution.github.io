@@ -37,17 +37,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 10%;
+    padding: 1vh 10%;
     background-color: #24252a;
   }
   
   .logo {
     cursor: pointer;
-  }
-
-  .logoSize {
-    height: 10vh;
-    width: auto;
   }
   
   .nav__links a,
