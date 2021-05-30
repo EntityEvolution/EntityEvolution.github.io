@@ -400,18 +400,21 @@
 
 .example_e {
 	border: none;
-	background: #404040;
+	background: #24252a;
 	color: #ffffff !important;
 	font-weight: 100;
 	padding: 20px;
 	text-transform: uppercase;
+  font-family: 'Kumbh Sans', sans-serif;
 	border-radius: 6px;
 	display: inline-block;
 	transition: all 0.3s ease 0s;
+  margin-bottom: 8%;
+  margin-top: 3%;
 }
 
 .example_e:hover {
-	color: #404040 !important;
+	color: #24252a !important;
 	font-weight: 700 !important;
 	letter-spacing: 3px;
 	background: none;
@@ -422,6 +425,11 @@
 
 
 /* All projects up */
+
+/* Team Members down */
+
+   
+/* Team Members up */
 
 /* footer down */
 
