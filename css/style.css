@@ -3,6 +3,13 @@
 
 /*End*/
 
+/* Down Variables*/
+
+:root {
+  --main-grey: #24252a;
+}
+
+/* Up Variables*/
 /*Scroll Bar*/
 
 
@@ -38,7 +45,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1vh 10%;
-    background-color: #24252a;
+    background-color: var(--main-grey);
   }
   
   .logo {
@@ -97,7 +104,7 @@
     z-index: 1;
     left: 0;
     top: 0;
-    background-color: #24252a;
+    background-color: var(--main-grey);
     overflow-x: hidden;
     transition: width 0.5s ease 0s;
   }
@@ -159,7 +166,7 @@
 /*Down About us*/
 
 .abus{
-  background-color: #24252a;
+  background-color: var(--main-grey);
   box-sizing: border-box;
   margin: 0;
   padding: 30px 10%;
@@ -188,7 +195,7 @@
 
 .ourp-title{
   margin-top: 10%;
-  color: #24252a;
+  color: var(--main-grey);
   font-weight: bold;
   left: 13%;
   right: 50%;
@@ -209,7 +216,7 @@
     font-size: 2.5rem;
     font-family: 'Kumbh Sans', sans-serif;
     font-weight: normal;
-    color: #24252a;
+    color: var(--main-grey);
     text-align: center;
     margin: 2rem 0;
   }
@@ -282,7 +289,7 @@
       content: '';
       display: block;
       opacity: .6;
-      background-color: #24252a;
+      background-color: var(--main-grey);
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
       border-radius: 10px;
@@ -395,7 +402,7 @@
 
 .example_e {
 	border: none;
-	background: #24252a;
+	background: var(--main-grey);
 	color: #ffffff !important;
 	font-weight: 100;
 	padding: 20px;
@@ -409,7 +416,7 @@
 }
 
 .example_e:hover {
-	color: #24252a !important;
+	color: var(--main-grey) !important;
 	font-weight: 700 !important;
 	letter-spacing: 3px;
 	background: none;
@@ -430,7 +437,7 @@
 
 .footer{
 
-  background-color: #24252a;
+  background-color: var(--main-grey);
   box-sizing: border-box;
   margin: 0;
   padding: 30px 10%;
