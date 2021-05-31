@@ -19,7 +19,6 @@
 
 
 ::-webkit-scrollbar-track {
-  background-color: rgb(7, 7, 7);
   border-radius: 0px;
 }
 
@@ -56,7 +55,7 @@
   .cta,
   .overlay__content a {
     font-family: 'Kumbh Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 550;
     color: #edf0f1;
     text-decoration: none;
   }
@@ -137,7 +136,7 @@
     top: 20px;
     right: 45px;
     font-size: 60px;
-    color: #edf0f1;
+    color: white
   }
   
   @media screen and (max-height: 450px) {
