@@ -368,7 +368,7 @@ header {
 
 .front .inner p:after{
   content: '';
-  width: 4rem;
+  width: 4vw;
   height: 2px;
   position: absolute;
   background: #C6D4DF;
