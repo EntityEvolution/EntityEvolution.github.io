@@ -1,19 +1,16 @@
 /*Import fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
-/*End*/
 
-/* Down Variables*/
+/* Variables */
 
 :root {
   --main-grey: #24252a;
 }
 
-/* Up Variables*/
-
-/*Scroll Bar*/
+/* Scroll Bar */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -22,20 +19,30 @@
 
 ::-webkit-scrollbar-thumb {
   background: #888;
-  border-radius: 40px;
+  border-radius: 12px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
-/*End*/
+/* Globals */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
   
+h1 {
+  font-size: 2.5rem;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-weight: normal;
+  color: var(--main-grey);
+  text-align: center;
+  margin: 2rem 0;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -44,6 +51,7 @@ header {
   background-color: var(--main-grey);
 }
 
+/* Navigation Header */
 .logo {
   cursor: pointer;
 }
@@ -87,8 +95,7 @@ header {
   background-color: #FC00FF;
 }
 
-/* Mobile Nav */
-
+/* Mobile Navigation Header */
 .menu {
   display: none;
 }
@@ -135,11 +142,8 @@ header {
   font-size: 60px;
   color: white
 }
-  
-/*Up nav*/
 
-/*Down About us*/
-
+/* About Us Page*/
 .abus{
   background-color: var(--main-grey);
   box-sizing: border-box;
@@ -178,23 +182,7 @@ header {
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-/*Down Products*/
-*{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-  
-h1{
-  font-size: 2.5rem;
-  font-family: 'Kumbh Sans', sans-serif;
-  font-weight: normal;
-  color: var(--main-grey);
-  text-align: center;
-  margin: 2rem 0;
-}
-
+/*Products*/
 .wrapper{
   width: 90%;
   margin: 0 auto;
@@ -354,9 +342,7 @@ h1{
   font-weight: 300;
 }
 
-
-
-/* All projects down */
+/* All Projects */
 .project_e {
   border: none;
   background: var(--main-grey);
@@ -382,13 +368,8 @@ h1{
   transition: all 0.3s ease 0s;
 }
 
+/* Team Members */
 
-/* All projects up */
-
-/* Team Members down */
-
-
-/* Team Members up */
 
 /* Footer */
 .footer{
@@ -406,7 +387,7 @@ h1{
   font-size: 0.8vw;
 }
 
-/* Calculations with Media */
+/* Calculations with Media for Phones */
 @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
