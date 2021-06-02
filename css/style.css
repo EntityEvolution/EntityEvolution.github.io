@@ -278,7 +278,7 @@ header {
   height: auto;
   border-radius: 10px;
   color: #fff;
-  font-size: 1.5rem;
+  font-size: 1.4vw;
 }
 
 .back{
@@ -323,7 +323,7 @@ header {
   position: absolute;
   left: 0;
   width: 100%;
-  padding: 2rem;
+  padding: 1.5vw;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   outline: 1px solid transparent;
@@ -361,7 +361,7 @@ header {
 }
 
 .front .inner p{
-  font-size: 2rem;
+  font-size: 2.4vw;
   margin-bottom: 2rem;
   position: relative;
 }
