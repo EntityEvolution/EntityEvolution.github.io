@@ -5,7 +5,7 @@
 
 /* Variables */
 :root {
-  --main-grey: #24252a;
+  --main-grey: #242526;
 }
 
 /* Scroll Bar */
@@ -84,12 +84,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #dd5dac;
+  color: #f20165;
 }
 
 .cta {
   padding: 9px 25px;
-  background-color: #dd5dac;
+  background-color: #d4095d;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -97,7 +97,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #d4095d;
+  background-color: #e91a40;
 }
 
 /* Mobile Navigation Header */
@@ -282,10 +282,7 @@ header {
 }
 
 .back{
-  background: #ffffff;
-  background: -webkit-linear-gradient(45deg,  #00DBDE 0%,#FC00FF 100%);
-  background: -o-linear-gradient(45deg,  #00DBDE 0%,#FC00FF 100%);
-  background: linear-gradient(45deg,  #00DBDE 0%,#FC00FF 100%);
+  background-color: var(--main-grey);
 }
 
 .front:after{
