@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
 
 
-/* Variables */
 
+/* Variables */
 :root {
   --main-grey: #24252a;
 }
@@ -56,6 +56,11 @@ header {
   cursor: pointer;
 }
 
+.logo-img {
+  height: 72px;
+  width: 72px;
+}
+
 .nav__links a,
 .cta,
 .overlay__content a {
@@ -79,12 +84,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #00DBDE;
+  color: #dd5dac;
 }
 
 .cta {
   padding: 9px 25px;
-  background-color: #00DBDE;
+  background-color: #dd5dac;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -92,7 +97,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #FC00FF;
+  background-color: #d4095d;
 }
 
 /* Mobile Navigation Header */
@@ -141,6 +146,47 @@ header {
   right: 45px;
   font-size: 60px;
   color: white
+}
+
+/* Calculations with Media for Phones */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 64rem){
+  .col{
+    width: calc(33.333333% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48rem){
+  .col{
+    width: calc(50% - 2rem);
+  }
+}
+
+@media screen and (max-width: 32rem){
+  .col{
+    width: 100%;
+    margin: 0 0 2rem 0;
+  }
 }
 
 /* About Us Page*/
@@ -384,46 +430,5 @@ header {
   text-align: center;
   color: white;
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 0.8vw;
-}
-
-/* Calculations with Media for Phones */
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
-  }
-  .overlay .close {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .nav__links,
-  .cta {
-    display: none;
-  }
-  .menu {
-    display: initial;
-  }
-}
-
-@media screen and (max-width: 64rem){
-  .col{
-    width: calc(33.333333% - 2rem);
-  }
-}
-
-@media screen and (max-width: 48rem){
-  .col{
-    width: calc(50% - 2rem);
-  }
-}
-
-@media screen and (max-width: 32rem){
-  .col{
-    width: 100%;
-    margin: 0 0 2rem 0;
-  }
+  font-size: 1.3vh;
 }
