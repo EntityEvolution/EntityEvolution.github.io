@@ -221,8 +221,8 @@ header {
   position: absolute;
   left: 65%;
   top: 35%;
-  width:18vw;
-  height:18vw;
+  width:34vh;
+  height:34vh;
   background: transparent;
   margin:20px;
   color:  white !important;
@@ -237,9 +237,9 @@ header {
 .abus-button-top {
   position: absolute;
   left: 77%;
-  top: 17%;
-  width:12vw;
-  height:12vw;
+  top: 16%;
+  width:22vh;
+  height:22vh;
   background: transparent;
   margin:20px;
   color:  white !important;
@@ -253,10 +253,10 @@ header {
 
 .abus-button-bottom {
   position: absolute;
-  left: 59%;
-  top: 63%;
-  width:12vw;
-  height:12vw;
+  left: 59.5%;
+  top: 66%;
+  width:22vh;
+  height:22vh;
   background: transparent;
   margin:20px;
   color:  white !important;
@@ -268,11 +268,22 @@ header {
   transition: all 0.3s ease 0s;
 }
 
-.abus-button p {
-  font-size: 2.0vw;
+.abus-button img {
+  width: 60%;
+  height: auto;
   font-family: 'Kumbh Sans', sans-serif;
   color: white;
-  transform:rotate(45deg) translate(5.5vw, 5.5vw); 
+  transform:rotate(45deg) translate(9vh, 0vh); 
+  text-align:center;
+}
+
+.abus-button-bottom img,
+.abus-button-top img {
+  width: 12.5vh;
+  height: auto;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: white;
+  transform:rotate(45deg) translate(5.7vh, 0vh); 
   text-align:center;
 }
 
