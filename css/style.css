@@ -99,6 +99,7 @@ header {
   cursor: pointer;
   transition: background-color 0.3s ease 0s;
   order: 3;
+  margin-right: 1%;
 }
 
 .cta:hover {
@@ -232,6 +233,12 @@ header {
   transform:rotate(-45deg);
   float:left;
   transition: all 0.3s ease 0s;
+}
+
+.abus-button {
+  content: "";
+  display: block;
+  padding-bottom: 0%;
 }
 
 .abus-button-top {
