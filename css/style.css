@@ -47,18 +47,21 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1vh 10%;
-  background-color: var(--main-grey);
+  padding: 20px 0%;
+  background-color: transparent;
+  background-image: url("../img/background.jpg");
 }
 
 /* Navigation Header */
-.logo {
-  cursor: pointer;
-}
-
-.logo-img {
-  height: 72px;
-  width: 72px;
+.nav_title {
+  font-family: 'Kumbh Sans';
+  font-weight: bolder;
+  font-size: 3vh;
+  color: #edf0f1;
+  order: 2;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .nav__links a,
@@ -73,6 +76,7 @@ header {
 .nav__links {
   list-style: none;
   display: flex;
+  order: 1;
 }
 
 .nav__links li {
@@ -94,6 +98,7 @@ header {
   border-radius: 50px;
   cursor: pointer;
   transition: background-color 0.3s ease 0s;
+  order: 3;
 }
 
 .cta:hover {
@@ -134,11 +139,12 @@ header {
   font-size: 36px;
   display: block;
   transition: color 0.3s ease 0s;
+  color: #d4095d;
 }
 
 .overlay a:hover,
 .overlay a:focus {
-  color: #00DBDE;
+  color: white;
 }
 .overlay .close {
   position: absolute;
@@ -191,44 +197,103 @@ header {
 
 /* About Us Page*/
 .abus{
-  background-color: var(--main-grey);
+  background-image: url("../img/background.jpg");
   box-sizing: border-box;
   margin: 0;
-  padding: 30px 10%;
-  margin-top: 40px;
+  padding: 28vh 10%;
 }
 
 .abus-title{
   color: rgb(255, 255, 255);
   font-weight: bold;
-  left: 13%;
-  right: 50%;
-  font-size: 5vw;
+  margin-top: 5%;
+  font-size: 7vw;
   font-family: 'Kumbh Sans', sans-serif;
-}
-.abus-line{
-  margin-right: 60%;
 }
 
 .abus-content{
   color: rgb(255, 255, 255);
-  left: 20%;
-  right: 50%;
-  font-size: 1.4vw;
+  font-size: 2.2vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
+.abus-button {
+  position: absolute;
+  left: 65%;
+  top: 35%;
+  width:18vw;
+  height:18vw;
+  background: transparent;
+  margin:20px;
+  color:  white !important;
+  font-weight: 700 !important;
+  letter-spacing: 2px;
+  border: 5px solid white;
+  transform:rotate(-45deg);
+  float:left;
+  transition: all 0.3s ease 0s;
+}
+
+.abus-button-top {
+  position: absolute;
+  left: 77%;
+  top: 17%;
+  width:12vw;
+  height:12vw;
+  background: transparent;
+  margin:20px;
+  color:  white !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  border: 5px solid white;
+  transform:rotate(-45deg);
+  float:left;
+  transition: all 0.3s ease 0s;
+}
+
+.abus-button-bottom {
+  position: absolute;
+  left: 59%;
+  top: 63%;
+  width:12vw;
+  height:12vw;
+  background: transparent;
+  margin:20px;
+  color:  white !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  border: 5px solid white;
+  transform:rotate(-45deg);
+  float:left;
+  transition: all 0.3s ease 0s;
+}
+
+.abus-button p {
+  font-size: 2.0vw;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: white;
+  transform:rotate(45deg) translate(5.5vw, 5.5vw); 
+  text-align:center;
+}
+
+.abus-button:hover {
+  color:  white !important;
+  font-weight: 900 !important;
+  letter-spacing: 3px;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
+}
+
+/*Projects*/
 .ourp-title{
   margin-top: 10%;
   color: var(--main-grey);
   font-weight: bold;
-  left: 13%;
-  right: 50%;
   font-size: 5vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-/*Products*/
 .wrapper{
   width: 90%;
   margin: 0 auto;
@@ -386,30 +451,7 @@ header {
 }
 
 /* All Projects */
-.project_e {
-  border: none;
-  background: var(--main-grey);
-  color: #ffffff !important;
-  font-weight: 100;
-  padding: 20px;
-  text-transform: uppercase;
-  font-family: 'Kumbh Sans', sans-serif;
-  border-radius: 6px;
-  display: inline-block;
-  transition: all 0.3s ease 0s;
-  margin-bottom: 8%;
-  margin-top: 3%;
-}
 
-.project_e:hover {
-  color: var(--main-grey) !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
-  background: none;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  transition: all 0.3s ease 0s;
-}
 
 /* Team Members */
 
