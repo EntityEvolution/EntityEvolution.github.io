@@ -220,39 +220,32 @@ header {
 
 .abus-button {
   position: absolute;
-  left: 65%;
+  left: 70%;
   top: 35%;
-  width:34vh;
-  height:34vh;
+  padding: 4vh 4vh;
   background: transparent;
-  margin:20px;
-  color:  white !important;
-  font-weight: 700 !important;
-  letter-spacing: 2px;
-  border: 5px solid white;
+  border: 0.6vw solid white;
   transform:rotate(-45deg);
   float:left;
   transition: all 0.3s ease 0s;
 }
 
-.abus-button {
-  content: "";
-  display: block;
-  padding-bottom: 0%;
+.abus-button img {
+  width: 10vw;
+  height: auto;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: white;
+  transform:rotate(45deg) translate(0vh, 0vh); 
+  text-align:center;
 }
 
 .abus-button-top {
   position: absolute;
-  left: 77%;
-  top: 16%;
-  width:22vh;
-  height:22vh;
+  left: 80%;
+  top: 19%;
+  padding: 4vh 4vh;
   background: transparent;
-  margin:20px;
-  color:  white !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
-  border: 5px solid white;
+  border: 0.4vw solid white;
   transform:rotate(-45deg);
   float:left;
   transition: all 0.3s ease 0s;
@@ -260,37 +253,23 @@ header {
 
 .abus-button-bottom {
   position: absolute;
-  left: 59.5%;
-  top: 66%;
-  width:22vh;
-  height:22vh;
+  left: 65vw;
+  top: 61.5%;
+  padding: 4vh 4vh;
   background: transparent;
-  margin:20px;
-  color:  white !important;
-  font-weight: 700 !important;
-  letter-spacing: 3px;
-  border: 5px solid white;
+  border: 0.4vw solid white;
   transform:rotate(-45deg);
   float:left;
   transition: all 0.3s ease 0s;
 }
 
-.abus-button img {
-  width: 60%;
-  height: auto;
-  font-family: 'Kumbh Sans', sans-serif;
-  color: white;
-  transform:rotate(45deg) translate(9vh, 0vh); 
-  text-align:center;
-}
-
 .abus-button-bottom img,
 .abus-button-top img {
-  width: 12.5vh;
+  width: 5vw;
   height: auto;
   font-family: 'Kumbh Sans', sans-serif;
   color: white;
-  transform:rotate(45deg) translate(5.7vh, 0vh); 
+  transform:rotate(45deg) translate(0.1vh, 0vh); 
   text-align:center;
 }
 
