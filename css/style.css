@@ -62,6 +62,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  text-decoration: none;
 }
 
 .nav__links a,
@@ -204,6 +205,51 @@ header {
   padding: 28vh 10%;
 }
 
+.abus-button-top {
+  position: absolute;
+  left: 75%;
+  top: 10%;
+  height: 20vw;
+  width: auto;
+}
+
+.abus-button-top:hover {
+  color:  white !important;
+  font-weight: 900 !important;
+  transform: scale(1.01);
+  transition: all 0.3s ease-out 0s;
+}
+
+.abus-button {
+  position: absolute;
+  left: 67.5%;
+  top: 30%;
+  height: 20vw;
+  width: auto;
+}
+
+.abus-button:hover {
+  color:  white !important;
+  font-weight: 900 !important;
+  transform: scale(1.01);
+  transition: all 0.3s ease-out 0s;
+}
+
+.abus-button-bottom {
+  position: absolute;
+  left: 60%;
+  top: 49%;
+  height: 20vw;
+  width: auto;
+}
+
+.abus-button-bottom:hover {
+  color:  white !important;
+  font-weight: 900 !important;
+  transform: scale(1.01);
+  transition: all 0.3s ease-out 0s;
+}
+
 .abus-title{
   color: rgb(255, 255, 255);
   font-weight: bold;
@@ -216,70 +262,6 @@ header {
   color: rgb(255, 255, 255);
   font-size: 2.2vw;
   font-family: 'Kumbh Sans', sans-serif;
-}
-
-.abus-button {
-  position: absolute;
-  left: 70%;
-  top: 35%;
-  padding: 4vh 4vh;
-  background: transparent;
-  border: 0.6vw solid white;
-  transform:rotate(-45deg);
-  float:left;
-  transition: all 0.3s ease 0s;
-}
-
-.abus-button img {
-  width: 10vw;
-  height: auto;
-  font-family: 'Kumbh Sans', sans-serif;
-  color: white;
-  transform:rotate(45deg) translate(0vh, 0vh); 
-  text-align:center;
-}
-
-.abus-button-top {
-  position: absolute;
-  left: 80%;
-  top: 19%;
-  padding: 4vh 4vh;
-  background: transparent;
-  border: 0.4vw solid white;
-  transform:rotate(-45deg);
-  float:left;
-  transition: all 0.3s ease 0s;
-}
-
-.abus-button-bottom {
-  position: absolute;
-  left: 65vw;
-  top: 61.5%;
-  padding: 4vh 4vh;
-  background: transparent;
-  border: 0.4vw solid white;
-  transform:rotate(-45deg);
-  float:left;
-  transition: all 0.3s ease 0s;
-}
-
-.abus-button-bottom img,
-.abus-button-top img {
-  width: 5vw;
-  height: auto;
-  font-family: 'Kumbh Sans', sans-serif;
-  color: white;
-  transform:rotate(45deg) translate(0.1vh, 0vh); 
-  text-align:center;
-}
-
-.abus-button:hover {
-  color:  white !important;
-  font-weight: 900 !important;
-  letter-spacing: 3px;
-  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
-  transition: all 0.3s ease 0s;
 }
 
 /*Projects*/
