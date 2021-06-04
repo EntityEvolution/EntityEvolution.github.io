@@ -436,17 +436,19 @@ header {
 
 
 /* Footer */
-.footer{
+.footer {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
   background-color: var(--main-grey);
   box-sizing: border-box;
   margin: 0;
-  padding: 30px 10%;
-  margin-bottom: 0px;
+  padding: 3rem 5%;
 }
 
 .copyright-bottom{
-  text-align: center;
+  position: relative;
   color: white;
   font-family: 'Kumbh Sans', sans-serif;
-  font-size: 1.3vh;
+  font-size: 1.6vh;
 }
