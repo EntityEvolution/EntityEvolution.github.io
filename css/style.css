@@ -202,7 +202,7 @@ header {
   background-image: url("../img/background.jpg");
   box-sizing: border-box;
   margin: 0;
-  padding: 28vh 10%;
+  padding: 30vh 10%;
 }
 
 .abus-button-top {
@@ -253,7 +253,6 @@ header {
 .abus-title{
   color: rgb(255, 255, 255);
   font-weight: bold;
-  margin-top: 5%;
   font-size: 7vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
@@ -265,11 +264,12 @@ header {
 }
 
 /*Projects*/
+
 .ourp-title{
-  margin-top: 10%;
+  margin-top: 5%;
   color: var(--main-grey);
   font-weight: bold;
-  font-size: 5vw;
+  font-size: 7vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
@@ -278,6 +278,7 @@ header {
   margin: 0 auto;
   max-width: 80rem;
   font-family: 'Kumbh Sans', sans-serif;
+  padding-top: 1px;
 }
 
 .cols{
@@ -323,6 +324,7 @@ header {
   border-radius: 10px;
   color: #fff;
   font-size: 1.4vw;
+  margin-bottom: 5%;
 }
 
 .back{
@@ -433,6 +435,20 @@ header {
 
 
 /* Team Members */
+.team-title {
+  padding: 1vh 10%;
+  background-color: blue;
+  color: var(--main-grey);
+  font-weight: bold;
+  font-size: 7vw;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.team-image {
+  width: 50%;
+  height: 100%;
+}
+
 
 
 /* Footer */
