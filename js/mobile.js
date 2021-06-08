@@ -17,8 +17,9 @@ const changingSlide = () => {
   currentSlide++;
   if (currentSlide > slides.length) {
     currentSlide = 1
-  }    
+  }
   slides[currentSlide - 1].style.display = "block";
+  slides[currentSlide - 1].style.animation = "fadeIn 1.5s linear";
   setTimeout(changingSlide, 5000);
 }
 

@@ -435,21 +435,69 @@ header {
 
 
 /* Team Members */
+.team-wrapper {
+  background-image: url("https://t3.ftcdn.net/jpg/01/07/13/18/240_F_107131854_25a570QHQv0bOH080OyT4LXPsWs0ifqb.jpg");
+}
 .team-title {
-  padding: 1vh 10%;
-  background-color: blue;
-  color: var(--main-grey);
+  padding: 5vh 10%;
+  color: white;
   font-weight: bold;
   font-size: 7vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-.team-image {
-  width: 50%;
-  height: 100%;
+.team-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
+.team-button-back {
+  position: relative;
+  align-self: center;
+  height: 10vh;
+  width: 10vh;
+  box-shadow: 1px -1px 0 1px white inset;
+  -webkit-box-shadow: 2px -2px white inset;
+  border: solid transparent;
+  border-width: 0 0 2rem 2rem;
+  transition: 0.2s;
+  transform:rotate(45deg);
+  background-color: transparent;
+  margin-bottom: 5vh;
+}
 
+.team-button-next {
+  position: relative;
+  align-self: center;
+  height: 10vh;
+  width: 10vh;
+  box-shadow: 1px -1px 0 1px white inset;
+  -webkit-box-shadow: 2px -2px white inset;
+  border: solid transparent;
+  border-width: 0 0 2rem 2rem;
+  transition: 0.2s;
+  transform:rotate(225deg);
+  background-color: transparent;
+  margin-bottom: 5vh;
+}
+
+.team-button-back:hover,
+.team-button-next:hover {
+  box-shadow: 2px -2px 0 2px #d4095d inset;
+  -webkit-box-shadow: 4px -4px #d4095d inset;
+}
+
+.team-image {
+  order: 2;
+  width: 50vw;
+  height: 90%;
+  margin-bottom: 5vh;
+}
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
 
 /* Footer */
 .footer {
