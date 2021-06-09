@@ -451,7 +451,7 @@ header {
   justify-content: space-evenly;
 }
 
-.team-button-back {
+.team-back {
   position: relative;
   align-self: center;
   height: 10vh;
@@ -466,7 +466,7 @@ header {
   margin-bottom: 5vh;
 }
 
-.team-button-next {
+.team-next {
   position: relative;
   align-self: center;
   height: 10vh;
@@ -481,8 +481,8 @@ header {
   margin-bottom: 5vh;
 }
 
-.team-button-back:hover,
-.team-button-next:hover {
+.team-back:hover,
+.team-next:hover {
   box-shadow: 2px -2px 0 2px #d4095d inset;
   -webkit-box-shadow: 4px -4px #d4095d inset;
 }
@@ -490,7 +490,7 @@ header {
 .team-image {
   order: 2;
   width: 50vw;
-  height: 90%;
+  height: 85%;
   margin-bottom: 5vh;
 }
 
