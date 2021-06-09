@@ -20,9 +20,13 @@
         <meta content="#00DBDE" data-react-helmet="true" name="theme-color">
     </head>
 
-<body> 
+<body>
+    <div id="alert" class="alert">
+        <span class="alert-text">Indicates a dangerous or potentially negative action.</span>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+    </div>
     <header>
-            <a class="nav_title" href="." >Entity Evolution</a>
+        <a class="nav_title" href="." >Entity Evolution</a>
         <nav>
             <ul class="nav__links">
                 <li><a href="#about">About</a></li>
@@ -144,14 +148,14 @@
     
     <footer class="footer">
         <div class="footer-main">
-            <p class="copyright-bottom">Contact</p>
+            <p class="copyright-title">Contact</p>
             <div class="slide-down">
-                <p class="copyright-bottom">Monte#4750</p>
-                <p class="copyright-bottom">entityev.org@gmail.com</p>
+                <p id="discord-copy" class="copyright-bottom">Monte#4750</p>
+                <p id="email-copy" class="copyright-bottom">entityev.org@gmail.com</p>
             </div>
         </div>
         <div class="footer-main">
-            <p class="copyright-bottom">Index</p>
+            <p class="copyright-title">Index</p>
             <div class="slide-down">
                 <a href="#about" class="copyright-bottom">About</a>
                 <a href="#projects" class="copyright-bottom">Projects</a>
@@ -159,7 +163,7 @@
             </div>
         </div>
         <div class="footer-main">
-            <p class="copyright-bottom">Recent Releases</p>
+            <p class="copyright-title">Recent Releases</p>
             <div class="slide-down">
                 <a rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-carhud" target="_blank" class="copyright-bottom">Car Hud</a>
                 <a rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-hud" target="_blank" class="copyright-bottom">Player Hud</a>
@@ -167,7 +171,7 @@
             </div>
         </div>
         <div class="footer-main">
-            <p class="copyright-bottom">Social Media</p>
+            <p class="copyright-title">Social Media</p>
             <div class="slide-right">
                 <a class="space-image" href="https://github.com/EntityEvolution/" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="GitHub" src="./img/githubLogo.png"></img></a>
                 <a class="space-image" href="https://discord.gg/u4zk4tVTkG" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="Dicsord" src="./img/discordLogo.png"></img></a>

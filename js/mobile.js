@@ -1,4 +1,4 @@
-
+// Mobile devices
 document.querySelector(".menu").addEventListener("click", () => {
   document.querySelector(".overlay").classList.add("overlay--active");
 });
@@ -6,6 +6,16 @@ document.querySelector(".menu").addEventListener("click", () => {
 document.querySelector(".close").addEventListener("click", () => {
   document.querySelector(".overlay").classList.remove("overlay--active");
 });
+
+// Copy text
+document.getElementById("discord-copy").addEventListener("click", () => {
+  copyText();
+})
+
+const copyText = (element) => {
+  document.execCommand("copy");
+  document.getElementById("alert").style.display = "block"
+}
 
 // Chancing slides
 let currentSlide = 0;

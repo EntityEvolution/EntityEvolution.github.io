@@ -26,6 +26,45 @@
   background: #555;
 }
 
+/* Alert */
+.alert {
+  display: none;
+  margin-top: 5%;
+  position: fixed;
+  float: right;
+  padding: 1.5vh 1%;
+  border-radius: 6px;
+  background-color: #e91a40;
+  color: white;
+  font-size: 1.0vw;
+  font-family: 'Kumbh Sans', sans-serif;
+  right: 0%;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+  margin-right: 0.5%;
+}
+
+@keyframes slide {
+  100% { right: 0; }
+}
+
+.closebtn {
+  margin-left: 1.2vw;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 1.8vw;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
 /* Globals */
 * {
   margin: 0;
@@ -510,7 +549,18 @@ header {
   padding: 3rem 5%;
 }
 
-.copyright-bottom{
+.copyright-title {
+  position: relative;
+  color: white;
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 2.0vh;
+  font-weight: bolder;
+  text-align: center;
+  margin-top: 0.1vh;
+  transition: all 0.4s;
+}
+
+.copyright-bottom {
   position: relative;
   color: white;
   font-family: 'Kumbh Sans', sans-serif;
@@ -518,6 +568,11 @@ header {
   font-weight: bolder;
   text-align: center;
   margin-top: 0.1vh;
+  transition: all 0.4s;
+}
+
+.copyright-bottom:hover {
+  color: #d4095d;
 }
 
 .slide-down {
