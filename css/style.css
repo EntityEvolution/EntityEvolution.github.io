@@ -38,11 +38,11 @@
   color: white;
   font-size: 1.0vw;
   font-family: 'Kumbh Sans', sans-serif;
-  right: 0%;
+  right: -50%;
   -webkit-animation: slide 0.5s forwards;
-  -webkit-animation-delay: 2s;
+  -webkit-animation-delay: 0s;
   animation: slide 0.5s forwards;
-  animation-delay: 2s;
+  animation-delay: 0s;
   margin-right: 0.5%;
 }
 
@@ -58,7 +58,7 @@
   font-size: 1.8vw;
   line-height: 20px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 1.0s;
 }
 
 .closebtn:hover {
@@ -569,6 +569,7 @@ header {
   text-align: center;
   margin-top: 0.1vh;
   transition: all 0.4s;
+  cursor: pointer;
 }
 
 .copyright-bottom:hover {
