@@ -281,55 +281,17 @@ header {
   background-color: rgba(17,24,39, 1);
   box-sizing: border-box;
   margin: 0;
-  padding: 30vh 10%;
+  padding: 5vh 10%;
 }
 
-.abus-button-top {
-  position: absolute;
-  left: 75%;
-  top: 10%;
-  height: 20vw;
-  width: auto;
-}
-
-.abus-button-top:hover {
-  color:  white !important;
-  font-weight: 900 !important;
-  transform: scale(1.01);
-  transition: all 0.3s ease-out 0s;
-}
-
-.abus-button {
-  position: absolute;
-  left: 67.5%;
-  top: 30%;
-  height: 20vw;
-  width: auto;
-}
-
-.abus-button:hover {
-  color:  white !important;
-  font-weight: 900 !important;
-  transform: scale(1.01);
-  transition: all 0.3s ease-out 0s;
-}
-
-.abus-button-bottom {
-  position: absolute;
-  left: 60%;
-  top: 49%;
-  height: 20vw;
-  width: auto;
-}
-
-.abus-button-bottom:hover {
-  color:  white !important;
-  font-weight: 900 !important;
-  transform: scale(1.01);
-  transition: all 0.3s ease-out 0s;
+.abus-container {
+  display: flex;
+  justify-content:space-between;
+  flex-direction: row;
 }
 
 .abus-title {
+  margin-top: 30%;
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 7vw;
@@ -341,6 +303,40 @@ header {
   font-size: 2.2vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
+
+.abus-button-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.abus-button-top {
+  height: 12vw;
+  width: auto;
+  float: right;
+}
+
+.abus-button {
+  height: 16vw;
+  width: auto;
+}
+
+.abus-button-bottom {
+  float: left;
+  height: 12vw;
+  width: auto;
+}
+
+.abus-button:hover,
+.abus-button-top:hover,
+.abus-button-bottom:hover {
+  color:  white !important;
+  font-weight: 900 !important;
+  transform: scale(1.01);
+  transition: all 0.3s ease-out 0s;
+}
+
+
+
 
 /*Projects*/
 .ourp-title {
