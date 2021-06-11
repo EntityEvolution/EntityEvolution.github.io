@@ -21,6 +21,10 @@ document.getElementById("discord-copy").addEventListener("click", () => {
   copyText("discord-copy");
 })
 
+document.getElementById("email-copy").addEventListener("click", () => {
+  copyText("email-copy");
+})
+
 const copyText = (element) => {
   let text = document.getElementById(element).innerText;
   const elem = document.createElement("textarea");
@@ -69,18 +73,21 @@ for (var e = 0; e < allId.length; e++) {
   const allImage = allId[e].id
   document.getElementById(allImage).onmouseover = function () {
     stopAnimation = true;
-    clearTimeout(clockTime)
+    clearTimeout(clockTime);
+    clearTimeout(clockAnimation);
   }
   document.getElementById(allImage).onmouseout = function () {
     stopAnimation = false;
-    clockTime = setTimeout(changingSlide, 5000);
+    clockAnimation = setTimeout(function(){ 
+      slides[currentSlide - 1].style.animation = "fadeOut 1.5s linear";
+    }, 8600);
+    clockTime = setTimeout(changingSlide, 10000);
   }
 }
 
 // Constantly moving slides
 const changingSlide = () => {
   if (stopAnimation) {
-    console.log("a")
     return
   }
   for (i = 0; i < slides.length; i++) {
@@ -92,7 +99,10 @@ const changingSlide = () => {
   }
   slides[currentSlide - 1].style.display = "block";
   slides[currentSlide - 1].style.animation = "fadeIn 1.5s linear";
-  clockTime = setTimeout(changingSlide, 5000);
+  clockAnimation = setTimeout(function(){ 
+    slides[currentSlide - 1].style.animation = "fadeOut 1.5s linear";
+  }, 8600);
+  clockTime = setTimeout(changingSlide, 10000);
 }
 
 changingSlide();

@@ -84,7 +84,7 @@
 }
 
 .accept:hover {
-  background-color: #1c75e9;
+  background-color: #83c401;
 }
 
 @keyframes slide {
@@ -99,7 +99,7 @@
   font-size: 1.8vw;
   line-height: 20px;
   cursor: pointer;
-  transition: 1.0s;
+  transition: 0.3s;
 }
 
 .closebtn:hover {
@@ -335,9 +335,6 @@ header {
   transition: all 0.3s ease-out 0s;
 }
 
-
-
-
 /*Projects*/
 .ourp-title {
   margin-top: 5%;
@@ -443,7 +440,6 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  border: 1px solid #1551b8;
 }
 
 .inner {
@@ -466,7 +462,6 @@ header {
   text-decoration: none;
   color: white;
   transition: 0.3s;
-
 }
 
 .projects:hover {
@@ -607,6 +602,11 @@ header {
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
+}
+
+@keyframes fadeOut {
+  0% {opacity:1;}
+  100% {opacity:0;}
 }
 
 /* Footer */
