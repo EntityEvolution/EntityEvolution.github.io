@@ -5,12 +5,12 @@
 
         <!--Website Info-->
         <title>Entity Evolution</title>
-        <link rel="Icon" type="image/png" href="./img/logo.png"/>
+        <link rel="Icon" type="image/png" href="./img/logos/logo.png"/>
 
         <!--Default metas-->
         <meta content="width=device-width, initial-scale=1.0" name="viewport" >
         <meta charset="UTF-8">
-        <meta content="Free Web tutorials" name="description">
+        <meta content="Entity Evolution Website" name="description">
 
         <!--Discord Embed-->
         <meta content="Entity Evolution" property="og:title">
@@ -20,11 +20,20 @@
         <meta content="#00DBDE" data-react-helmet="true" name="theme-color">
     </head>
 
-<body>
+<body style="background-color: #192841;">
+    
+    <!--Alerts/Notification-->
     <div id="alert" class="alert">
         <span class="alert-text">Indicates a dangerous or potentially negative action.</span>
         <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
     </div>
+    <div id="alert-question" class="alert-question">
+        <span class="alert-text">You're about to open a new page. Would you like to continue?</span>
+        <a id="accept" class="question accept" rel="nofollow noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=entityev.org@gmail.com&su=Question/Concern/Offer&body=Your+question/problem+goes+here" target="_blank">Accept</a>
+        <button class="question deny" onclick="this.parentElement.style.display='none';">Cancel</button> 
+    </div>
+
+    <!--Header-->
     <header>
         <a class="nav_title" href="." >Entity Evolution</a>
         <nav>
@@ -34,7 +43,7 @@
                 <li><a href="#team">Team</a></li>
             </ul>
         </nav>
-        <a class="cta" rel="nofollow noopener" href="https://mail.google.com/mail/?view=cm&fs=1&to=entityev.org@gmail.com&su=Question/Concern/Offer&body=Your+question/problem+goes+here" target="_blank">Contact</a>
+        <a id="contact" class="cta">Contact</a>
         <p class="menu cta">Menu</p>
     </header>
     <div class="overlay">
@@ -61,9 +70,10 @@
 
     <!--Project Panels-->
     <div id="projects" class="wrapper" >
-        <h1 class= "ourp-title">Top Projects</h1>
+        <h1 class="ourp-title">Top Projects</h1>
+        <p class="ourp-description">Entity Evolution has many resources that you can use for your server or for other uses.</p>
         <div class="cols">
-            <div id="test" class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
                     <div class="front" style="background-image: url(https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/gray-background-7131-96d780fd18d4eaf58a7331d45573204e@1x.jpg)">
                         <div class="inner">
@@ -73,12 +83,12 @@
                     </div>
                     <div class="back">
                         <div class="inner">
-                            <p>x</p>
+                            <a class="projects" rel="nofollow noopener" href="https://forum.cfx.re/t/release-pe-adminmenu-for-esx-1-2-v2-in-progress/2066772" target="_blank">More information</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="test" class="col" ontouchstart="this.classList.toggle('hover');">
+            <div class="col" ontouchstart="this.classList.toggle('hover');">
                 <div class="container">
                     <div class="front" style="background-image: url(https://static.vecteezy.com/system/resources/previews/001/255/940/original/gray-herringbone-pattern-vector.jpg)">
                         <div class="inner">
@@ -88,7 +98,7 @@
                     </div>
                     <div class="back">
                         <div class="inner">
-                            <p>x</p>
+                            <a class="projects" rel="nofollow noopener" href="https://forum.cfx.re/t/release-pe-hud-customizable-standalone-hud/2647626" target="_blank">More information</a>
                         </div>
                     </div>
                 </div>
@@ -103,7 +113,7 @@
                     </div>
                     <div class="back">
                         <div class="inner">
-                            <p>x</p>
+                            <a class="projects" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-carhud" target="_blank">More information</a>
                         </div>
                     </div>
                 </div>
@@ -118,7 +128,7 @@
                     </div>
                     <div class="back">
                         <div class="inner">
-                            <p>x</p>
+                            <a class="projects" rel="nofollow noopener" href="https://forum.cfx.re/t/release-pe-tpmenu-ui-teleport-to-places-with-a-menu/2795149" target="_blank">More information</a>
                         </div>
                     </div>
                 </div>
@@ -126,26 +136,28 @@
         </div>
     </div>
     <div class="ourrp-wrapper">
-        <h1 class="ourp-title">Explore all <br>our projects!</h1>
+        <h1 class="ourp-title-two">Explore all <br>our projects!</h1>
     </div>
-    
+
+    <!--Current Team-->
     <div class="team-wrapper" id="team">
         <h1 class="team-title">Current Team</h1>
         <div id="all-images" class="team-container">
             <button id="before" aria-label="Left" class="team-back"></button>
             <div id="img-one" class="team-slides">
-              <img class="team-image" alt="Team member" src="./img/slideBombay.jpg">
+              <img class="team-image" alt="Team member" src="./img/slideOne.jpg">
             </div>
             <div id="img-two" class="team-slides">
-              <img class="team-image" alt="Team member" src="/img/test2.jpg">
+              <img class="team-image" alt="Team member" src="/img/slideTwo.jpg">
             </div>
             <div id="img-three" class="team-slides">
-              <img class="team-image" alt="Team member" src="./img/test3.jpg">
+              <img class="team-image" alt="Team member" src="./img/slideThree.jpg">
             </div>
-            <button id="after" aria-label="Right" class="team-next"></button>
+            <button id="after" class="team-next" aria-label="Right"></button>
         </div>
     </div>
     
+    <!--Footer-->
     <footer class="footer">
         <div class="footer-main">
             <p class="copyright-title">Contact</p>
@@ -157,33 +169,34 @@
         <div class="footer-main">
             <p class="copyright-title">Index</p>
             <div class="slide-down">
-                <a href="#about" class="copyright-bottom">About</a>
-                <a href="#projects" class="copyright-bottom">Projects</a>
-                <a href="#team" class="copyright-bottom">Team</a>
+                <a class="copyright-bottom" href="#about">About</a>
+                <a class="copyright-bottom" href="#projects">Projects</a>
+                <a class="copyright-bottom" href="#team">Team</a>
             </div>
         </div>
         <div class="footer-main">
             <p class="copyright-title">Recent Releases</p>
             <div class="slide-down">
-                <a rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-carhud" target="_blank" class="copyright-bottom">Car Hud</a>
-                <a rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-hud" target="_blank" class="copyright-bottom">Player Hud</a>
-                <a rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-adminmenu-esx" target="_blank" class="copyright-bottom">Admin Menu</a>
+                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-carhud" target="_blank">Car Hud</a>
+                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-hud" target="_blank">Player Hud</a>
+                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-adminmenu-esx" target="_blank">Admin Menu</a>
             </div>
         </div>
         <div class="footer-main">
             <p class="copyright-title">Social Media</p>
             <div class="slide-right">
-                <a class="space-image" href="https://github.com/EntityEvolution/" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="GitHub" src="./img/githubLogo.png"></img></a>
-                <a class="space-image" href="https://discord.gg/u4zk4tVTkG" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="Dicsord" src="./img/discordLogo.png"></img></a>
-                <a class="space-image" href="https://forum.cfx.re/u/Xios_Bombay/activity/topics" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="FiveM" src="./img/fivemLogo.png"></img></a>
+                <a class="space-image" href="https://github.com/EntityEvolution/" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="GitHub" src="./img/logos/githubLogo.png"></img></a>
+                <a class="space-image" href="https://discord.gg/u4zk4tVTkG" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="Dicsord" src="./img/logos/discordLogo.png"></img></a>
+                <a class="space-image" href="https://forum.cfx.re/u/Xios_Bombay/activity/topics" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="FiveM" src="./img/logos/fivemLogo.png"></img></a>
             </div>
             <div class="slide-right">
-                <a class="space-image" href="https://twitter.com/EvolutionEntity" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Twitter" src="./img/twitterLogo.png"></img></a>
-                <a class="space-image" href="https://mail.google.com/mail/?view=cm&fs=1&to=entityev.org@gmail.com&su=Question/Concern/Offer&body=Your+question/problem+goes+here" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Gmail" src="./img/emailLogo.png"></img></a>
-                <a class="space-image" href="https://www.youtube.com/channel/UCVx5qZTZr_-USsd2jS2O_UQ" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Youtube" src="./img/youtubeLogo.png"></img></a>
+                <a class="space-image" href="https://twitter.com/EvolutionEntity" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Twitter" src="./img/logos/twitterLogo.png"></img></a>
+                <a class="space-image" href="https://mail.google.com/mail/?view=cm&fs=1&to=entityev.org@gmail.com&su=Question/Concern/Offer&body=Your+question/problem+goes+here" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Gmail" src="./img/logos/emailLogo.png"></img></a>
+                <a class="space-image" href="https://www.youtube.com/channel/UCVx5qZTZr_-USsd2jS2O_UQ" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Youtube" src="./img/logos/youtubeLogo.png"></img></a>
             </div>
         </div>
     </footer>
+    <!--Load Scripts-->
     <script type="text/javascript" src="./js/mobile.js"></script>
 </body>   
 </html>

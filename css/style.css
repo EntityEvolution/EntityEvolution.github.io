@@ -6,6 +6,7 @@
 /* Variables */
 :root {
   --main-grey: #242526;
+  --hover-blue: #0b56d0;
 }
 
 /* Scroll Bar */
@@ -15,6 +16,7 @@
 
 ::-webkit-scrollbar-track {
   border-radius: 0px;
+  background-color: #555;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -27,18 +29,19 @@
 }
 
 /* Alert */
-.alert {
+.alert,
+.alert-question {
   display: none;
   margin-top: 5%;
   position: fixed;
-  float: right;
-  padding: 1.5vh 1%;
-  border-radius: 6px;
-  background-color: #e91a40;
+  padding: 1.9vh 0.5%;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #23529e;
   color: white;
   font-size: 1.0vw;
   font-family: 'Kumbh Sans', sans-serif;
-  right: -50%;
+  left: -50%;
   -webkit-animation: slide 0.5s forwards;
   -webkit-animation-delay: 0s;
   animation: slide 0.5s forwards;
@@ -46,8 +49,46 @@
   margin-right: 0.5%;
 }
 
+.alert-question {
+  display: none;
+  flex-wrap: wrap;
+  width: 25%;
+  justify-content: space-evenly;
+}
+
+.question {
+  display: none;
+  display: flex;
+  justify-content: space-evenly;
+  position: relative;
+  width: 40%;
+
+  text-decoration: none;
+  margin-top: 2.5%;
+  padding: 0.8vh;
+  border-radius: 6px;
+  border: 0px transparent;
+  text-decoration: none;
+
+  font-size: 1.0vw;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #555;
+  color: white;
+
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.deny:hover {
+  background-color: #ff3535;
+}
+
+.accept:hover {
+  background-color: #4DD080;
+}
+
 @keyframes slide {
-  100% { right: 0; }
+  100% { left: 0; }
 }
 
 .closebtn {
@@ -87,8 +128,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 0%;
-  background-color: transparent;
-  background-image: url("../img/background.jpg");
+  background-color: #252d38;
 }
 
 /* Navigation Header */
@@ -128,12 +168,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #f20165;
+  color: #4f92e9;
 }
 
 .cta {
   padding: 9px 25px;
-  background-color: #d4095d;
+  background-color: #1e62ce;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -143,7 +183,7 @@ header {
 }
 
 .cta:hover {
-  background-color: #e91a40;
+  background-color: #0b56d0;
 }
 
 /* Mobile Navigation Header */
@@ -238,7 +278,7 @@ header {
 
 /* About Us Page*/
 .abus{
-  background-image: url("../img/background.jpg");
+  background-color: rgba(17,24,39, 1);
   box-sizing: border-box;
   margin: 0;
   padding: 30vh 10%;
@@ -289,38 +329,46 @@ header {
   transition: all 0.3s ease-out 0s;
 }
 
-.abus-title{
+.abus-title {
   color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 7vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-.abus-content{
-  color: rgb(255, 255, 255);
+.abus-content {
+  color: #4795e0;
   font-size: 2.2vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
 /*Projects*/
-
-.ourp-title{
+.ourp-title {
   margin-top: 5%;
-  color: var(--main-grey);
+  color: #fff;
   font-weight: bold;
-  font-size: 7vw;
+  font-size: 5vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-.wrapper{
+.ourp-description {
+  color: rgba(156,163,175,1);
+  text-align: center;
+  font-size: 1.3vw;
+  font-family: 'Kumbh Sans', sans-serif;
+  margin-bottom: 1%;
+}
+
+.wrapper {
   width: 90%;
   margin: 0 auto;
   max-width: 80rem;
   font-family: 'Kumbh Sans', sans-serif;
   padding-top: 1px;
+  background-color: #192841;
 }
 
-.cols{
+.cols {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,13 +379,13 @@ header {
   justify-content: center;
 }
 
-.col{
+.col {
   width: calc(25% - 2rem);
   margin: 1rem;
   cursor: pointer;
 }
 
-.container{
+.container {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -webkit-perspective: 1000px;
@@ -345,7 +393,7 @@ header {
 }
 
 .front,
-.back{
+.back {
   background-size: cover;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.25);
   border-radius: 10px;
@@ -366,11 +414,11 @@ header {
   margin-bottom: 5%;
 }
 
-.back{
+.back {
   background-color: var(--main-grey);
 }
 
-.front:after{
+.front:after {
   position: absolute;
   top: 0;
   left: 0;
@@ -386,7 +434,7 @@ header {
   border-radius: 10px;
 }
 .container:hover .front,
-.container:hover .back{
+.container:hover .back {
   -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
   transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
   -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
@@ -394,14 +442,15 @@ header {
   transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
-.back{
+.back {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  border: 1px solid #1551b8;
 }
 
-.inner{
+.inner {
   -webkit-transform: translateY(-50%) translateZ(60px) scale(0.94);
   transform: translateY(-50%) translateZ(60px) scale(0.94);
   top: 50%;
@@ -417,41 +466,52 @@ header {
   z-index: 2;
 }
 
-.container .back{
+.projects {
+  text-decoration: none;
+  color: white;
+  transition: 0.3s;
+
+}
+
+.projects:hover {
+  color: #4f92e9;
+}
+
+.container .back {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.container .front{
+.container .front {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.container:hover .back{
+.container:hover .back {
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.container:hover .front{
+.container:hover .front {
   -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.front .inner p{
+.front .inner p {
   font-size: 2.4vw;
   margin-bottom: 2rem;
   position: relative;
 }
 
-.front .inner p:after{
+.front .inner p:after {
   content: '';
   width: 4vw;
   height: 2px;
@@ -464,10 +524,17 @@ header {
   bottom: -.75rem;
 }
 
-.front .inner span{
+.front .inner span {
   color: rgba(255,255,255,0.7);
   font-family: 'Kumbh Sans', sans-serif;
   font-weight: 300;
+}
+
+.ourp-title-two {
+  color: #fff;
+  font-weight: bold;
+  font-size: 5vw;
+  font-family: 'Kumbh Sans', sans-serif;
 }
 
 /* All Projects */
@@ -475,19 +542,21 @@ header {
 
 /* Team Members */
 .team-wrapper {
-  background-image: url("https://t3.ftcdn.net/jpg/01/07/13/18/240_F_107131854_25a570QHQv0bOH080OyT4LXPsWs0ifqb.jpg");
+  background-color: #1f2d46;
 }
+
 .team-title {
   padding: 5vh 10%;
   color: white;
   font-weight: bold;
-  font-size: 7vw;
+  font-size: 6vw;
   font-family: 'Kumbh Sans', sans-serif;
 }
 
 .team-container {
   display: flex;
   justify-content: space-evenly;
+  padding-bottom: 5vh;
 }
 
 .team-back {
@@ -514,7 +583,7 @@ header {
   -webkit-box-shadow: 2px -2px white inset;
   border: solid transparent;
   border-width: 0 0 2rem 2rem;
-  transition: 0.2s;
+  transition: 0.5s;
   transform:rotate(225deg);
   background-color: transparent;
   margin-bottom: 5vh;
@@ -522,15 +591,21 @@ header {
 
 .team-back:hover,
 .team-next:hover {
-  box-shadow: 2px -2px 0 2px #d4095d inset;
-  -webkit-box-shadow: 4px -4px #d4095d inset;
+  box-shadow: 2px -2px 0 2px #4f92e9 inset;
+  -webkit-box-shadow: 4px -4px #4f92e9 inset;
 }
 
 .team-image {
   order: 2;
   width: 50vw;
-  height: 85%;
-  margin-bottom: 5vh;
+  height: 100%;
+  box-shadow: 0px 0px 20px rgb(1, 12, 28);
+  border-radius: 8px;
+  transition: 0.6s;
+}
+
+.team-image:hover {
+  transform: scale(1.02);
 }
 
 @keyframes fadeIn {
@@ -543,7 +618,7 @@ header {
   display: flex;
   justify-content: space-between;
   position: relative;
-  background-color: var(--main-grey);
+  background-color: #2f3744;
   box-sizing: border-box;
   margin: 0;
   padding: 3rem 5%;
@@ -568,12 +643,12 @@ header {
   font-weight: bolder;
   text-align: center;
   margin-top: 0.1vh;
-  transition: all 0.4s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
 .copyright-bottom:hover {
-  color: #d4095d;
+  color: #4f92e9;
 }
 
 .slide-down {
@@ -604,9 +679,14 @@ header {
   align-content: center;
   width: 5vh;
   height: 5vh;
-  margin-top: 8%;
+  margin-top: 10%;
   margin-left: 8%;
   margin-right: 8%;
+}
+
+.slide-image:hover,
+.slide-image-two:hover {
+  filter: invert(47%) sepia(90%) saturate(1270%) hue-rotate(193deg) brightness(99%) contrast(84%);
 }
 
 .slide-image-two {

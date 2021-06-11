@@ -7,6 +7,15 @@ document.querySelector(".close").addEventListener("click", () => {
   document.querySelector(".overlay").classList.remove("overlay--active");
 });
 
+// Alerts
+document.getElementById("accept").addEventListener("click", () => {
+  document.getElementById("alert-question").style.display = "none"
+})
+
+document.getElementById("contact").addEventListener("click", () => {
+  document.getElementById("alert-question").style.display = "flex"
+})
+
 // Copy text
 document.getElementById("discord-copy").addEventListener("click", () => {
   copyText();
@@ -77,7 +86,7 @@ const changingSlide = () => {
   }
   slides[currentSlide - 1].style.display = "block";
   slides[currentSlide - 1].style.animation = "fadeIn 1.5s linear";
-  clockTime = setTimeout(changingSlide, 5000);
+
 }
 
 changingSlide();
