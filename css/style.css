@@ -142,6 +142,11 @@ header {
   left: 50%;
   transform: translateX(-50%);
   text-decoration: none;
+  transition: 0.5s;
+}
+
+.nav_title:hover {
+  color: #4f92e9;
 }
 
 .nav__links a,
@@ -311,19 +316,22 @@ header {
 
 .abus-button-top {
   height: 12vw;
-  width: auto;
+  width: 12vw;
   float: right;
+  transition: 0.3s;
 }
 
 .abus-button {
   height: 16vw;
-  width: auto;
+  width: 16vw;
+  transition: 0.3s;
 }
 
 .abus-button-bottom {
   float: left;
   height: 12vw;
-  width: auto;
+  width: 12vw;
+  transition: 0.3s;
 }
 
 .abus-button:hover,
@@ -331,8 +339,7 @@ header {
 .abus-button-bottom:hover {
   color:  white !important;
   font-weight: 900 !important;
-  transform: scale(1.01);
-  transition: all 0.3s ease-out 0s;
+  transform: scale(1.1);
 }
 
 /*Projects*/
