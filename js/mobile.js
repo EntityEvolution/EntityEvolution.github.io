@@ -9,20 +9,26 @@ document.querySelector(".close").addEventListener("click", () => {
 
 // Alerts
 document.getElementById("accept").addEventListener("click", () => {
-  document.getElementById("alert-question").style.display = "none"
+  document.getElementById("alert-question").style.display = "none";
 })
 
 document.getElementById("contact").addEventListener("click", () => {
-  document.getElementById("alert-question").style.display = "flex"
+  document.getElementById("alert-question").style.display = "flex";
 })
 
 // Copy text
 document.getElementById("discord-copy").addEventListener("click", () => {
-  copyText();
+  copyText("discord-copy");
 })
 
 const copyText = (element) => {
+  var text = document.getElementById(element).innerText;
+  var elem = document.createElement("textarea");
+  document.body.appendChild(elem);
+  elem.value = text;
+  elem.select();
   document.execCommand("copy");
+  document.body.removeChild(elem);
   document.getElementById("alert").style.display = "block"
 }
 
@@ -86,7 +92,7 @@ const changingSlide = () => {
   }
   slides[currentSlide - 1].style.display = "block";
   slides[currentSlide - 1].style.animation = "fadeIn 1.5s linear";
-
+  clockTime = setTimeout(changingSlide, 5000);
 }
 
 changingSlide();

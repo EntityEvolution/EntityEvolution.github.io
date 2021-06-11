@@ -32,12 +32,12 @@
 .alert,
 .alert-question {
   display: none;
-  margin-top: 5%;
+  margin-top: 4%;
   position: fixed;
-  padding: 1.9vh 0.5%;
+  padding: 1.9vh;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
-  background-color: #23529e;
+  background-color: #254e91;
   color: white;
   font-size: 1.0vw;
   font-family: 'Kumbh Sans', sans-serif;
@@ -52,7 +52,7 @@
 .alert-question {
   display: none;
   flex-wrap: wrap;
-  width: 25%;
+  width: 18%;
   justify-content: space-evenly;
 }
 
@@ -80,11 +80,11 @@
 }
 
 .deny:hover {
-  background-color: #ff3535;
+  background-color: #ed1c49;
 }
 
 .accept:hover {
-  background-color: #4DD080;
+  background-color: #1c75e9;
 }
 
 @keyframes slide {
@@ -92,7 +92,7 @@
 }
 
 .closebtn {
-  margin-left: 1.2vw;
+  margin-left: 0.7vw;
   color: white;
   font-weight: bold;
   float: right;
@@ -103,7 +103,7 @@
 }
 
 .closebtn:hover {
-  color: black;
+  color: #ed1c49;
 }
 
 /* Globals */
@@ -220,7 +220,7 @@ header {
   font-size: 36px;
   display: block;
   transition: color 0.3s ease 0s;
-  color: #d4095d;
+  color: #4f92e9;
 }
 
 .overlay a:hover,
