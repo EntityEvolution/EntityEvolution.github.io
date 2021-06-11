@@ -22,8 +22,8 @@ document.getElementById("discord-copy").addEventListener("click", () => {
 })
 
 const copyText = (element) => {
-  var text = document.getElementById(element).innerText;
-  var elem = document.createElement("textarea");
+  let text = document.getElementById(element).innerText;
+  const elem = document.createElement("textarea");
   document.body.appendChild(elem);
   elem.value = text;
   elem.select();
