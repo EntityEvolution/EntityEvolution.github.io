@@ -36,6 +36,32 @@ const copyText = (element) => {
   document.getElementById("alert").style.display = "block"
 }
 
+// Scroll Up
+window.onscroll = () => {
+  if (document.documentElement.scrollTop > 80) {
+    document.querySelector('.scroll-up-container').classList.add('show')
+  } else {
+    document.querySelector('.scroll-up-container').classList.remove('show')
+  }
+}
+
+document.querySelector('.scroll-up-container').addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+})
+
+// Href animations
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+    });
+  });
+});
+
 // Chancing slides
 let currentSlide = 0;
 let i;
