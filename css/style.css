@@ -582,6 +582,7 @@ header {
   font-weight: 300;
 }
 
+/* All Projects */
 .ourp-title-two {
   color: #fff;
   font-weight: bold;
@@ -589,8 +590,44 @@ header {
   font-family: 'Kumbh Sans', sans-serif;
 }
 
-/* All Projects */
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
+.ourp-btn {
+  display: inline-block;
+  padding: 0.7vh 1.7vh;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 8px;
+  text-decoration:none;
+  font-family: 'Kumbh Sans', sans-serif;
+  color:#FFFFFF;
+  background-color: #254e91;
+  box-shadow: 0px 0px 20px rgba(1, 12, 28, 0.268);
+  text-align:center;
+  position:relative;
+  transition: 0.4s;
+}
+
+.ourp-btn:hover {
+  transform: scale(1.1);
+}
+
+.ourp-btn-img {
+  font-size: 8.5vh; 
+  font-family:'Comic Sans MS'; 
+  border-right:1px solid rgba(255,255,255,0.5); 
+  padding-right:2vh; 
+  vertical-align:middle;
+}
+
+.ourp-image {
+  position: relative;
+  top: 1vh;
+  width: 10vh;
+  height: 10vh;
+}
 
 /* Team Members */
 .team-wrapper {
