@@ -28,6 +28,38 @@
   background: #555;
 }
 
+/*scroll up bottom*/
+.scroll-up-container{
+  position: fixed;
+  bottom: 4rem;
+  right: 4rem;
+  width: 6rem;
+  height: 6.6;
+  z-index: -1;
+}
+
+.scroll-up-bottom{
+  width: 0rem;
+  height: 0rem;
+  background: #1e62ce;
+  border-radius: 50%;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.scroll-up-bottom i{
+  position: absolute;
+  font-size: 1.7rem;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50, -50) scale(0);
+  color: rgb(255, 255, 255);
+  transition: .2s;
+
+}
 /* Alert */
 .alert,
 .alert-question {
@@ -544,7 +576,7 @@ header {
 }
 
 .team-title {
-  padding: 5vh 10%;
+  padding-top: 4vh;
   color: white;
   font-weight: bold;
   font-size: 6vw;
