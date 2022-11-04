@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
     <head>
-        <link rel="stylesheet" type="text/css" href="./css/style.css">
-
         <!--Website Info-->
         <title>Entity Evolution</title>
         <link rel="Icon" type="image/png" href="./img/logos/logo.png"/>
@@ -10,202 +8,21 @@
         <!--Default metas-->
         <meta content="width=device-width, initial-scale=1.0" name="viewport" >
         <meta charset="UTF-8">
-        <meta content="Entity Evolution Website" name="description">
+        <meta content="Entity Evolution is an organization focused on keeping the FiveM enviroment open sourced by releasing paid and custom resources." name="description">
 
         <!--Discord Embed-->
         <meta content="Entity Evolution" property="og:title">
-        <meta content="Some guys trying to share useful resources for the community." property="og:description">
+        <meta content="Organization focused on keeping the FiveM enviroment open sourced." property="og:description">
         <meta content="https://entityevolution.github.io/" property="og:url">
-        <meta content="https://c.iodine.gg/e9i27" property="og:image">
         <meta content="#00DBDE" data-react-helmet="true" name="theme-color">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/navbar.css">
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
+        <link rel="stylesheet" type="text/css" href="./css/footer.css">
     </head>
 
-<body style="background-color: #192841;">
-    
-    <!--Alerts/Notification-->
-    <div id="alert" class="alert">
-        <span class="alert-text">Copied text to clipboard!</span>
-        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-    </div>
-    <div id="alert-question" class="alert-question">
-        <span class="alert-text">You're about to open a new page. Would you like to continue?</span>
-        <a id="accept" class="question accept" href="https://mail.google.com/mail/?view=cm&fs=1&to=entityev.org@gmail.com&su=Question/Concern/Offer&body=Your+question/problem+goes+here" target="_blank" rel="nofollow noopener">Accept</a>
-        <button class="question deny" onclick="this.parentElement.style.display='none';">Cancel</button> 
-    </div>
+<body>
 
-    <!--Scroll Up Button-->
-    <div id="up" class="scroll-up-container">
-        <img class="scroll-arrow" src="./img/logos/upArrow.png" href="#">
-    </div>
-
-    <!--Header-->
-    <header>
-        <a class="nav_title" href="." >Entity Evolution</a>
-        <nav>
-            <ul class="nav__links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#team">Team</a></li>
-            </ul>
-        </nav>
-        <a id="contact" class="cta">Contact</a>
-        <p class="menu cta">Menu</p>
-    </header>
-    <div class="overlay">
-        <a class="close">&times;</a>
-        <div class="overlay__content">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#team">Our Team</a>
-            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=entityev.org@gmail.com&su=Question/Concern/Offer&body=Your+question/problem+goes+here" target="_blank" rel="nofollow noopener">Contact</a>
-        </div>
-    </div>
-
-    <!--Abous Us Slide-->
-    <div id="about" class="abus">
-        <div class="abus-container">
-            <div>
-                <h2 class="abus-title">Who are we?</h2>
-                <p class="abus-content">A group of teenagers who are trying</p>
-                <p class="abus-content">to share awesome resources for the <strong>FiveM</strong></p>
-                <p class="abus-content">community and many other useful utilities.</p>
-            </div>
-            <div class="abus-button-container">
-                <a href="https://discord.gg/u4zk4tVTkG" target="_blank" rel="nofollow noopener"><img class="abus-button-top" alt="Discord" src="./img/discordSquare.png"></img></a>
-                <a href="https://github.com/EntityEvolution" target="_blank" rel="nofollow noopener"><img class="abus-button" alt="GitHub" src="./img/githubSquare.png"></img></a>
-                <a href="https://forum.cfx.re/u/Xios_Bombay/activity/topics" target="_blank" rel="nofollow noopener"><img class="abus-button-bottom" alt="Discord" src="./img/fivemSquare.png"></img></a>
-            </div>
-        </div>
-    </div>
-
-    <!--Project Panels-->
-    <div id="projects" class="wrapper" >
-        <h1 class="ourp-title">Top Projects</h1>
-        <p class="ourp-description">Entity Evolution has many resources that you can use for your server or for other uses.</p>
-        <div class="cols">
-            <div class="col" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(https://merriam-webster.com/assets/mw/images/article/art-wap-landing-mp-lg/gray-background-7131-96d780fd18d4eaf58a7331d45573204e@1x.jpg)">
-                        <div class="inner">
-                            <p>Anims</p>
-                            <span>A NUI emote/animation panel for FiveM.</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div class="inner">
-                            <a class="projects" rel="nofollow noopener" href="https://forum.cfx.re/t/release-anims-simple-animations-panel/4790662" target="_blank">More information</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(https://static.vecteezy.com/system/resources/previews/001/255/940/original/gray-herringbone-pattern-vector.jpg)">
-                        <div class="inner">
-                            <p>Hud</p>
-                            <span>A customizable HUD for ingame statistics</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div class="inner">
-                            <a class="projects" rel="nofollow noopener" href="https://forum.cfx.re/t/release-pe-hud-customizable-standalone-hud/2647626" target="_blank">More information</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH0wgoo46pX4lJcU8S5ZVUVfxYcyGPivdqqw&usqp=CAU)">
-                        <div class="inner">
-                            <p>Car Hud</p>
-                            <span>A customizable car HUD for vehicle statistics</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div class="inner">
-                            <a class="projects" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-carhud" target="_blank">More information</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col" ontouchstart="this.classList.toggle('hover');">
-                <div class="container">
-                    <div class="front" style="background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWvIf8wcFvE81i_25_mSt_K-VWPPd1rN-Yog&usqp=CAU)">
-                        <div class="inner">
-                            <p>Teleport UI</p>
-                            <span>A teleport with an interactable UI</span>
-                        </div>
-                    </div>
-                    <div class="back">
-                        <div class="inner">
-                            <a class="projects" rel="nofollow noopener" href="https://forum.cfx.re/t/release-pe-tpmenu-ui-teleport-to-places-with-a-menu/2795149" target="_blank">More information</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="ourrp-wrapper">
-        <h1 class="ourp-title-two">Explore all <br>our projects!</h1>
-        <div class="btn-wrapper">
-            <a class="ourp-btn" href="https://github.com/EntityEvolution/" target="_blank" rel="nofollow noopener">
-                <span class="ourp-btn-img"><img class="ourp-image" src="./img/logos/githubLogo.png" alt="Github"></span>
-                 Learn more about our other projects!
-            </a>
-        </div>
-    </div>
-
-    <!--Current Team-->
-    <div class="team-wrapper" id="team">
-        <h1 class="team-title">Current Team</h1>
-        <div id="all-images" class="team-container">
-            <button id="before" aria-label="Left" class="team-back"></button>
-            <div id="img-one" class="team-slides">
-              <img class="team-image" alt="Team member" src="./img/slideOne.jpg">
-            </div>
-            <div id="img-three" class="team-slides">
-                <img class="team-image" alt="Team member" src="./img/slideThree.jpg">
-              </div>
-            <button id="after" class="team-next" aria-label="Right"></button>
-        </div>
-    </div>
-    
-    <!--Footer-->
-    <footer class="footer">
-        <div class="footer-main">
-            <p class="copyright-title">Contact</p>
-            <div class="slide-down">
-                <p id="discord-copy" class="copyright-bottom">Monte#4750</p>
-                <p id="email-copy" class="copyright-bottom">entityev.org@gmail.com</p>
-            </div>
-        </div>
-        <div class="footer-main">
-            <p class="copyright-title">Index</p>
-            <div class="slide-down">
-                <a class="copyright-bottom" href="#about">About</a>
-                <a class="copyright-bottom" href="#projects">Projects</a>
-                <a class="copyright-bottom" href="#team">Team</a>
-            </div>
-        </div>
-        <div class="footer-main">
-            <p class="copyright-title">Recent Releases</p>
-            <div class="slide-down">
-                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/BombayV/anims" target="_blank">Anims</a>
-                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-carhud" target="_blank">Car Hud</a>
-                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-hud" target="_blank">Player Hud</a>
-                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-jobcenter" target="_blank">Job Center</a>
-                <a class="copyright-bottom" rel="nofollow noopener" href="https://github.com/EntityEvolution/ev-tpmenu-ui" target="_blank">Teleport UI</a>
-            </div>
-        </div>
-        <div class="footer-main">
-            <p class="copyright-title">Social Media</p>
-            <div class="slide-right">
-                <a class="space-image" href="https://github.com/EntityEvolution/" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="GitHub" src="./img/logos/githubLogo.png"></img></a>
-                <a class="space-image" href="https://forum.cfx.re/u/SirBombay/activity/topics" target="_blank" rel="nofollow noopener"><img class="slide-image" alt="FiveM" src="./img/logos/fivemLogo.png"></img></a>
-                <a class="space-image" href="https://www.youtube.com/channel/UCVx5qZTZr_-USsd2jS2O_UQ" target="_blank" rel="nofollow noopener"><img class="slide-image-two" alt="Youtube" src="./img/logos/youtubeLogo.png"></img></a>
-            </div>
-        </div>
-    </footer>
 
     <!--Load Scripts-->
     <script type="text/javascript" src="./js/mobile.js"></script>
