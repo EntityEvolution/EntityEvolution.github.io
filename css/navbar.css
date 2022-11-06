@@ -23,6 +23,50 @@
   fill: #fff;
 }
 
+.sidenav {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  transition: 0.5s;
+  padding-top: 60px;
+  background-color: #111;
+}
+
+.slide-in-nav {
+  animation: slideInSidebar 0.5s ease forwards;
+}
+
+.slide-out-nav {
+  animation: slideOutSidebar 0.5s ease forwards;
+}
+
+[data-active="true"] {
+  animation: slideInSidebar 0.5s ease forwards;
+}
+
+[data-active="false"] {
+  animation: slideOutSidebar 0.5s ease forwards;
+}
+
+@keyframes slideInSidebar {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOutSidebar {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 @keyframes close {
   0% {
     transform: translateY(0);

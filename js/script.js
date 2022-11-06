@@ -1,6 +1,8 @@
 "use strict";
 import SpaceTravel from './classes/SpaceTravel.js';
 
+console.log(PROD)
+
 let canvas = null;
 let skip = null;
 
