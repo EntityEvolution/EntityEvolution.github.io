@@ -13,7 +13,7 @@ window.addEventListener('load', () => {
     if (starsStopped === 0) {
       spaceTravel.gentleStop();
     }
-  }, 4000);
+  }, 1500);
 
   window.addEventListener('starStopped', () => {
     starsStopped++;
