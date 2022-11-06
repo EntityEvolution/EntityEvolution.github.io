@@ -22,24 +22,32 @@ window.addEventListener('load', () => {
     }
     if (starsStopped === maxStars) {
       console.log('All stars stopped');
-      const wrapper = document.getElementById('wrapper');
-      wrapper.style.display = 'flex';
+      document.getElementById('wrapper').style.display = 'flex';
       document.querySelector('.slide-down').style.opacity = '1';
     }
   });
 
   skip.addEventListener('click', (e) => {
     e.preventDefault();
-    spaceTravel.gentleStop();
-    removeText(e.target);
+    starsStopped++;
+    removeText(e.target, () => {
+      document.getElementById('wrapper').style.display = 'flex';
+      document.querySelector('.slide-down').style.opacity = '1';
+
+      canvas.style.opacity = '0';
+      setTimeout(() => {
+        canvas.style.display = 'none';
+      }, 1000);
+    });
   });
 });
 
-const removeText = (skip) => {
+const removeText = (skip, cb) => {
   skip.classList.remove('slideUp');
   skip.classList.add('slideDown');
   skip.onanimationend = () => {
     // Remove skip from the DOM
     skip.remove();
+    cb && cb();
   };
 }
