@@ -8,8 +8,8 @@
 
 .main-logo {
   height: 100%;
-  width: 80%;
-  background-image: url('../media/logo.png');
+  width: 100%;
+  background-image: url('../media/background.png');
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

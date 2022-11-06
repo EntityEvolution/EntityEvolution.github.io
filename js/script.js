@@ -3,6 +3,7 @@ import SpaceTravel from './classes/SpaceTravel.js';
 window.addEventListener('load', () => {
   const canvas = document.getElementById('canvas');
   const skip = document.getElementById('skip');
+  const mobRefresh = document.getElementById('refresh-mob');
   const spaceTravel = new SpaceTravel(canvas, 200);
   const maxStars = spaceTravel.getMaxStars();
   let starsStopped = 0;
@@ -12,7 +13,7 @@ window.addEventListener('load', () => {
     if (starsStopped === 0) {
       spaceTravel.gentleStop();
     }
-  }, 3000);
+  }, 4000);
 
   window.addEventListener('starStopped', () => {
     starsStopped++;
@@ -21,9 +22,13 @@ window.addEventListener('load', () => {
       return;
     }
     if (starsStopped === maxStars) {
-      console.log('All stars stopped');
-      document.getElementById('wrapper').style.display = 'flex';
-      document.querySelector('.slide-down').style.opacity = '1';
+
+      canvas.style.opacity = '0';
+      setTimeout(() => {
+        canvas.style.display = 'none';
+        document.getElementById('wrapper').style.display = 'flex';
+        document.querySelector('.slide-down').style.opacity = '1';
+      }, 1000);
     }
   });
 
@@ -31,14 +36,19 @@ window.addEventListener('load', () => {
     e.preventDefault();
     starsStopped++;
     removeText(e.target, () => {
-      document.getElementById('wrapper').style.display = 'flex';
-      document.querySelector('.slide-down').style.opacity = '1';
 
       canvas.style.opacity = '0';
       setTimeout(() => {
         canvas.style.display = 'none';
-      }, 1000);
+        document.getElementById('wrapper').style.display = 'flex';
+        document.querySelector('.slide-down').style.opacity = '1';
+      }, 500);
     });
+  });
+
+  mobRefresh.addEventListener('click', (e) => {
+    e.preventDefault();
+    location.reload();
   });
 });
 
