@@ -9,7 +9,7 @@
 
 .mobile-nav img {
   height: 3.4rem;
-  margin-left: 1rem;
+  margin-left: 12px;
   cursor: pointer;
 }
 
@@ -17,20 +17,27 @@
   margin-right: 12px;
 }
 
-#mobile-sidebar svg {
-  width: 2rem;
-  height: 2rem;
-  fill: #fff;
-}
-
 .sidenav {
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 100;
+  z-index: 101;
   transition: 0.5s;
-  padding-top: 60px;
-  background-color: #111;
+  background-color: #000;
+}
+
+.sidenav button {
+  margin-right: 12px;
+}
+
+.sidenav img {
+  margin-left: 12px;
+}
+
+#sidebar-mob svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
 }
 
 .slide-in-nav {
@@ -49,6 +56,28 @@
   animation: slideOutSidebar 0.5s ease forwards;
 }
 
+.mob-header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 4.5rem;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #545454;
+}
+
+.mob-header img {
+  margin: auto;
+  height: 3.4rem;
+}
+
+#sidenav-close svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+
+/* Animations */
 @keyframes slideInSidebar {
   0% {
     transform: translateX(100%);
