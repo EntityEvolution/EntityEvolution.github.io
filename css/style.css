@@ -88,11 +88,11 @@ canvas {
 
 /* Animations */
 .slideUp {
-  animation: slideUp 2.5s ease;
+  animation: slideUp 1.5s ease;
 }
 
 .slideDown {
-  animation: slideDown 2.5s ease forwards;
+  animation: slideDown 1.5s ease forwards;
 }
 
 @keyframes fadeIn {

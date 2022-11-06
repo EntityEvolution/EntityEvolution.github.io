@@ -71,6 +71,19 @@ class SpaceTravel {
     this.speed = speed;
   }
 
+  getWebGlSupport() {
+    const tempCanvas = document.createElement('canvas');
+    try {
+      return !!(
+        window.WebGLRenderingContext &&
+        (tempCanvas.getContext('webgl') || tempCanvas.getContext('experimental-webgl'))
+      );
+    } catch (e) {
+      console.log(e)
+      return false;
+    }
+  }
+
   getMaxStars() {
     return this.maxStars;
   }
