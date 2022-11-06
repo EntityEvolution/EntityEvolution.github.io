@@ -9,6 +9,7 @@ class SpaceTravel {
   speed = 0.075;
   stars = [];
   maxStars = 10;
+  req = null;
   constructor(canvas, stars) {
     this.canvas = canvas;
     this.ctx = canvas.getContext('2d');
@@ -36,12 +37,20 @@ class SpaceTravel {
 
   start() {
     // Create a stable speed
-    this.speed = 0.015;
+    this.speed = 0.025;
     this.ctx.setTransform(1, 0, 0, 1, 0, 0);
     this.ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
     this.draw();
-    window.requestAnimationFrame(this.start.bind(this));
+    this.req = window.requestAnimationFrame(this.start.bind(this));
+  }
+
+  gentleStop() {
+    // Slowly call stop on each star
+    this.setSpeed(0.03);
+    for (let i = 0; i < this.stars.length; i++) {
+      this.stars[i].stop();
+    }
   }
 
   createStars() {
@@ -56,6 +65,14 @@ class SpaceTravel {
 
     this.halfHeight = this.canvas.height / 2;
     this.halfWidth = this.canvas.width / 2;
+  }
+
+  setSpeed(speed) {
+    this.speed = speed;
+  }
+
+  getMaxStars() {
+    return this.maxStars;
   }
 
   getHalfHeight() {

@@ -5,6 +5,7 @@ class Star {
   color = null;
   v = null;
   space = null;
+  stopV = false;
   constructor(space) {
     this.color = `hsla(200, 100%, ${this.randomize(80, 100)}%, 1)`;
     this.space = space;
@@ -26,8 +27,21 @@ class Star {
     ctx.stroke();
 
     if (x < 0 - this.space.getHalfWidth() || x > this.space.getHalfWidth() || y < 0 - this.space.getHalfHeight() || y > this.space.getHalfHeight()) {
+      if (this.stopV) {
+        this.color = `hsla(0, 0%, 0%, 1)`;
+        this.v = null;
+        this.velocity = null;
+        this.stopV = null;
+        window.dispatchEvent(new CustomEvent('starStopped'));
+      }
       this.reset(ctx)
     }
+  }
+
+  stop() {
+    // Begin setting the color to black
+    this.stopV = true;
+    this.space.setSpeed(0.030);
   }
 
   reset() {
