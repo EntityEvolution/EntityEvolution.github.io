@@ -18,12 +18,22 @@
 }
 
 .sidenav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
   height: 100%;
   width: 100%;
+  transform: translateX(-100%);
   position: fixed;
   z-index: 101;
   transition: 0.5s;
   background-color: #000;
+  font-family: 'Inter', sans-serif;
+}
+
+.sidenav div:nth-child(1) {
+  width: 100%;
 }
 
 .sidenav button {
@@ -31,13 +41,101 @@
 }
 
 .sidenav img {
-  margin-left: 12px;
+  padding-left: 50px;
 }
 
 #sidebar-mob svg {
   width: 2rem;
   height: 2rem;
   fill: #fff;
+}
+
+.mob-header {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  height: 4.5rem;
+  width: 100%;
+  border-bottom: 1px solid #545454;
+}
+
+.mob-header img {
+  margin: auto;
+  height: 3.4rem;
+}
+
+#sidenav-close svg {
+  width: 2rem;
+  height: 2rem;
+  fill: #fff;
+}
+
+.sidenav-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+}
+
+.sidenav-list div {
+  border-bottom: 1px solid #545454;
+  width: 100%;
+}
+
+.sidenav-list a {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 0 1.5rem;
+  height: 4.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  transition: background-color 0.15s;
+  cursor: pointer;
+}
+
+.sidenav-list a:hover {
+  background-color: rgb(10, 10, 10);
+}
+
+.sidenav-list svg {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 12px;
+}
+
+.sidenav-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  color: #606060;
+}
+
+.sidenav-footer span:nth-child(1) {
+  font-weight: 600;
+  font-size: 0.925rem;
+}
+
+.sidenav-footer span:nth-child(2) {
+  margin-top: 0.2rem;
+  font-weight: 300;
+}
+
+.sidenav-footer a {
+  color: #c78cc7;
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.sidenav-footer a:hover {
+  color: #d7d7d7;
 }
 
 .slide-in-nav {
@@ -54,27 +152,6 @@
 
 [data-active="false"] {
   animation: slideOutSidebar 0.5s ease forwards;
-}
-
-.mob-header {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  height: 4.5rem;
-  width: 100%;
-  position: fixed;
-  border-bottom: 1px solid #545454;
-}
-
-.mob-header img {
-  margin: auto;
-  height: 3.4rem;
-}
-
-#sidenav-close svg {
-  width: 2rem;
-  height: 2rem;
-  fill: #fff;
 }
 
 /* Animations */

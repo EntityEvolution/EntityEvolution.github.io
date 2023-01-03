@@ -28,6 +28,14 @@
   transition: opacity 1.5s ease;
 }
 
+.intro-cont {
+  position: relative;
+  /*min-height: 100vh;*/
+  background-color: red;
+  display: grid;
+  place-items: center;
+}
+
 @keyframes bump {
   0%, 100% {
     transform: translateX(-50%) translateY(-25%);

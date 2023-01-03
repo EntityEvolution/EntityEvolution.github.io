@@ -22,6 +22,7 @@ window.addEventListener('load', () => {
     removeText();
     hideCanvas();
   }
+  debugMode();
 
   // Listeners
   mobRefresh.addEventListener('click', (e) => {
@@ -58,6 +59,7 @@ const debugMode = () => {
   canvas.style.display = 'none';
   document.getElementById('wrapper').style.display = 'flex';
   document.querySelector('.slide-down').style.opacity = '1';
+  document.getElementById('skip').remove();
 }
 
 const hideCanvas = () => {

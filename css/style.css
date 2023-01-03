@@ -8,8 +8,6 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
 
   text-rendering: optimizeLegibility;
   font-size: 16px;
@@ -46,6 +44,22 @@ canvas {
   transition: opacity 0.2s ease;
 }
 
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #56585d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .beforeCanvas {
   display: flex; /* flexbox */
   align-items: center;
@@ -76,7 +90,7 @@ canvas {
 
 /* Main Content */
 .wrapper {
-  position: relative;
+  position: absolute;
   display: none;
   flex-direction: column;
   align-items: center;
