@@ -26,6 +26,8 @@ footer {
   justify-content: start;
   column-gap: 0.6rem;
   align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .footer-links svg {
@@ -46,10 +48,11 @@ footer {
   align-items: start;
 }
 
-.footer-refs p {
+.footer-refs span {
   color: #bdc0c0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .footer-refs div {
@@ -57,6 +60,8 @@ footer {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: start;
+  row-gap: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .footer-refs div a {
@@ -74,9 +79,11 @@ footer {
 .footer-copyright {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   width: 90%;
   height: 4rem;
   border-top: 1px solid #bdc0c0;
+  font-weight: 500;
+  color: #989ba2;
 }

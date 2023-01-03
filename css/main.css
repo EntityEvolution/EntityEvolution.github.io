@@ -30,10 +30,23 @@
 
 .intro-cont {
   position: relative;
-  /*min-height: 100vh;*/
-  background-color: red;
   display: grid;
   place-items: center;
+  width: 100%;
+  background-image: url('../media/ffflurry.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.intro-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  width: 90%;
+  font-family: 'Inter', sans-serif;
 }
 
 @keyframes bump {
