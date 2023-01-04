@@ -41,7 +41,36 @@ window.addEventListener('load', () => {
     // Change data-active attribute
     sidenav.setAttribute('data-active', 'false');
   });
+
+  const titles = document.querySelectorAll('.intro-title');
+  const paragraphs = document.querySelectorAll('.intro-p');
+  for (let i = 0; i < titles.length; i++) {
+    if (i % 2 === 0) {
+      setupScroll(titles[i], 'slide-left');
+      setupScroll(paragraphs[i], 'slide-left');
+    } else {
+      setupScroll(titles[i], 'slide-right');
+      setupScroll(paragraphs[i], 'slide-right');
+    }
+  }
 });
+
+const setupScroll = (target, anim) => {
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target;
+        target.classList.add(anim);
+        observer.disconnect();
+      }
+    })
+  }, {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  })
+  observer.observe(target);
+}
 
 const removeText = (cb) => {
   skip.classList.remove('slideUp');
