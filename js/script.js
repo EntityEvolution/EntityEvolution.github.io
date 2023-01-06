@@ -44,6 +44,7 @@ window.addEventListener('load', () => {
 
   const titles = document.querySelectorAll('.intro-title');
   const paragraphs = document.querySelectorAll('.intro-p');
+  const cards = document.querySelectorAll('.card-res');
   for (let i = 0; i < titles.length; i++) {
     if (i % 2 === 0) {
       setupScroll(titles[i], 'slide-left');
@@ -51,6 +52,14 @@ window.addEventListener('load', () => {
     } else {
       setupScroll(titles[i], 'slide-right');
       setupScroll(paragraphs[i], 'slide-right');
+    }
+  }
+
+  for (let i = 0; i < cards.length; i++) {
+    if (i % 2 === 0) {
+      setupScroll(cards[i], 'slide-left');
+    } else {
+      setupScroll(cards[i], 'slide-right');
     }
   }
 });
