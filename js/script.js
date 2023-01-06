@@ -4,7 +4,7 @@ import SpaceTravel from './classes/SpaceTravel.js';
 let canvas = null;
 let skip = null;
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   // Elems
   canvas = document.getElementById('canvas');
   skip = document.getElementById('skip');
@@ -24,6 +24,24 @@ window.addEventListener('load', () => {
   }
   debugMode();
 
+  // Setup fav res
+  await setupFavRes();
+
+  // Observer setup
+  const titles = document.querySelectorAll('.intro-title');
+  const paragraphs = document.querySelectorAll('.intro-p');
+  const cards = document.querySelectorAll('.card-res');
+  for (let i = 0; i < titles.length; i++) {
+    setupScroll(titles[i], 'slide-left');
+    setupScroll(paragraphs[i], 'slide-left');
+  }
+
+  for (let i = 0; i < cards.length; i++) {
+    setupScroll(cards[i], 'slide-right');
+  }
+
+  setupScroll( document.querySelector('.card-title'), 'slide-right');
+
   // Listeners
   mobRefresh.addEventListener('click', (e) => {
     e.preventDefault();
@@ -41,26 +59,12 @@ window.addEventListener('load', () => {
     // Change data-active attribute
     sidenav.setAttribute('data-active', 'false');
   });
+});
 
-  const titles = document.querySelectorAll('.intro-title');
-  const paragraphs = document.querySelectorAll('.intro-p');
-  const cards = document.querySelectorAll('.card-res');
-  for (let i = 0; i < titles.length; i++) {
-    if (i % 2 === 0) {
-      setupScroll(titles[i], 'slide-left');
-      setupScroll(paragraphs[i], 'slide-left');
-    } else {
-      setupScroll(titles[i], 'slide-right');
-      setupScroll(paragraphs[i], 'slide-right');
-    }
-  }
-
-  for (let i = 0; i < cards.length; i++) {
-    if (i % 2 === 0) {
-      setupScroll(cards[i], 'slide-left');
-    } else {
-      setupScroll(cards[i], 'slide-right');
-    }
+window.addEventListener('resize', (e) => {
+  // If the new width is less than 768px, set the sidenav attribute to false
+  if (window.innerWidth > 768) {
+    document.getElementById('sidenav').setAttribute('data-active', 'false');
   }
 });
 
@@ -79,6 +83,32 @@ const setupScroll = (target, anim) => {
     threshold: 0.1
   })
   observer.observe(target);
+}
+
+const setupFavRes = async () => {
+  const rawData = await fetch('./data/favres.json');
+  const data = await rawData.json();
+  const cont = document.querySelector('.card-cont');
+  for (const res of data) {
+    const contEl = document.createElement('div');
+    const titleEl = document.createElement('span');
+    const descEl = document.createElement('span');
+    const btnEl = document.createElement('button');
+    const aEl = document.createElement('a');
+    contEl.classList.add('card-res');
+    titleEl.classList.add('title');
+    titleEl.textContent = res.title;
+    descEl.textContent = res.description;
+    aEl.textContent = res.label;
+    aEl.href = res.url;
+    aEl.target = '_blank';
+    aEl.rel = 'noopener noreferrer';
+    btnEl.appendChild(aEl);
+    contEl.appendChild(titleEl);
+    contEl.appendChild(descEl);
+    contEl.appendChild(btnEl);
+    cont.appendChild(contEl);
+  }
 }
 
 const removeText = (cb) => {

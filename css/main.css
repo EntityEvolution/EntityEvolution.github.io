@@ -86,18 +86,19 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  row-gap: 1rem;
   align-items: start;
   height: 100%;
   width: 90%;
-  padding-bottom: 2rem;
   font-family: 'Inter', sans-serif;
+  padding-bottom: 2.5rem;
 }
 
 .card-title {
   font-size: 2.5rem;
   font-weight: 800;
   color: #fff;
-  margin-bottom: 1rem;
+  opacity: 0;
 }
 
 .card-res {
@@ -106,15 +107,15 @@
   align-items: center;
   width: 100%;
   background: linear-gradient(to right, #2b2c2c 0%, #242426 100%);
-  border-right: 2px solid rgba(0, 0, 0, 0.40);
-  border-bottom: 3px solid rgba(0, 0, 0, 0.40);
+  border-right: 4px solid rgba(0, 0, 0, 0.40);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.40);
   padding: 1rem 0;
   border-radius: 8px;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
 }
 
 .card-res .title {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 600;
   color: #fff;
   width: 90%;
@@ -215,15 +216,39 @@
 @media screen and (min-width: 768px) {
   .intro-cont {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: start;
+    padding-bottom: 4rem;
+    padding-top: 1.2rem;
   }
 
   .intro-title {
     font-size: 3.5rem;
   }
 
+  .card-title {
+    font-size: 3.5rem;
+  }
+
   .intro-p {
     font-size: 1.4rem;
-    width: 44rem;
+    width: 100%;
+  }
+
+  .intro-wrapper {
+    width: 45%;
+    padding-left: 6rem;
+  }
+
+  .card-cont {
+    padding-top: 1rem;
+    padding-right: 6rem;
+    width: 35%;
+    margin-top: 12px;
+  }
+
+  .slide-down {
+    width: 3rem;
+    height: 3rem;
   }
 }
