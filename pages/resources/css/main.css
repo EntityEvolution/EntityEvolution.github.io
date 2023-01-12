@@ -1,0 +1,126 @@
+main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 2rem;
+}
+
+body {
+  background-image: url("../../../media/ffflurry2.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  margin-top: 4.2rem;
+}
+
+.main-desc {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+}
+
+.repos-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 2rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.repo-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 90%;
+  background: linear-gradient(to right, #2b2c2c 0%, #242426 100%);
+  border-right: 4px solid rgba(0, 0, 0, 0.40);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.40);
+  padding: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  opacity: 0;
+}
+
+.repo-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  width: 90%;
+}
+
+.repo-desc {
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: #fff;
+  width: 90%;
+  margin-top: 0.2rem;
+}
+
+.repo-cont button {
+  position: relative;
+  width: 90%;
+  height: 2.4rem;
+  background-color: #8157c9;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.0rem;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  margin-top: 0.8rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transition: 0.2s ease;
+  border-right: 2px solid rgba(0, 0, 0, 0.45);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.45);
+}
+
+.repo-cont button:hover {
+  background-color: #9a60ff;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .repo-cont {
+    width: 40%;
+  }
+
+  .main-title {
+    font-size: 4.2rem;
+    margin-top: 0.4rem;
+  }
+
+  .main-desc {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .repo-cont {
+    width: 30%;
+  }
+}

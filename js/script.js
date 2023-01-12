@@ -5,6 +5,8 @@ let canvas = null;
 let skip = null;
 
 window.addEventListener('load', async () => {
+  const firstTime = localStorage.getItem('first');
+
   // Elems
   canvas = document.getElementById('canvas');
   skip = document.getElementById('skip');
@@ -14,15 +16,18 @@ window.addEventListener('load', async () => {
   const sidenavClose = document.getElementById('sidenav-close');
 
   // three.js init
-  const spaceTravel = new SpaceTravel(canvas, 200);
-  if (spaceTravel.getWebGlSupport()) {
-    supportsWebGL(spaceTravel);
+  if (firstTime !== 'false') {
+    const spaceTravel = new SpaceTravel(canvas, 200);
+    if (spaceTravel.getWebGlSupport()) {
+      supportsWebGL(spaceTravel);
+    } else {
+      // If WebGL is not supported, remove the canvas and show the text
+      removeText();
+      hideCanvas();
+    }
   } else {
-    // If WebGL is not supported, remove the canvas and show the text
-    removeText();
-    hideCanvas();
+    debugMode();
   }
-  debugMode();
 
   // Setup fav res
   await setupFavRes();
@@ -59,12 +64,8 @@ window.addEventListener('load', async () => {
     // Change data-active attribute
     sidenav.setAttribute('data-active', 'false');
   });
-});
-
-window.addEventListener('resize', (e) => {
-  // If the new width is less than 768px, set the sidenav attribute to false
-  if (window.innerWidth > 768) {
-    document.getElementById('sidenav').setAttribute('data-active', 'false');
+  if (firstTime === null) {
+    localStorage.setItem('first', 'false');
   }
 });
 

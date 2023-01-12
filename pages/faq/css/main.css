@@ -1,0 +1,108 @@
+main {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  font-family: 'Inter', sans-serif;
+  padding-bottom: 2rem;
+}
+
+body {
+  background-image: url("../../../media/bbburst.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  margin-top: 4.2rem;
+}
+
+.main-desc {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.faqs-cont {
+  columns: auto 1;
+  width: 90%;
+  margin-top: 2rem;
+}
+
+.faq-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to right, #2b2c2c 0%, #242426 100%);
+  border-right: 4px solid rgba(0, 0, 0, 0.40);
+  border-bottom: 4px solid rgba(0, 0, 0, 0.40);
+  padding: 1rem 0;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  margin-bottom: 1rem;
+}
+
+.faq-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fff;
+  width: 90%;
+}
+
+.faq-desc {
+  font-size: 1.0rem;
+  font-weight: 400;
+  color: #fff;
+  width: 90%;
+  margin-top: 0.2rem;
+}
+
+.faq-ins {
+  font-weight: 600;
+  color: #fff;
+  width: 90%;
+  margin-top: 0.6rem;
+  font-size: 1.1rem;
+}
+
+.faq-cont ol {
+  width: 90%;
+  margin: 0.6rem 0 0;
+}
+
+.faq-cont li {
+  font-size: 1.0rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.faq-cont img {
+  margin-top: 1rem;
+  width: 90%;
+  border-radius: 6px;
+  border: 2px solid rgba(79, 79, 79, 0.4);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .faqs-cont {
+    columns: auto 2;
+  }
+
+  .main-title {
+    font-size: 4.2rem;
+    margin-top: 0.4rem;
+  }
+
+  .main-desc {
+    font-size: 1.5rem;
+  }
+}

@@ -213,7 +213,7 @@ header a:hover {
     font-size: 16px;
   }
 
-  .mobile-nav {
+  .mobile-nav, .sidenav {
     display: flex;
   }
 
@@ -228,7 +228,7 @@ header a:hover {
     font-size: 24px;
   }
 
-  .mobile-nav {
+  .mobile-nav, .sidenav {
     display: none;
   }
 
